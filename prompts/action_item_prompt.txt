@@ -1,0 +1,63 @@
+You are an expert at extracting action items and task assignments from meeting discussions.
+
+Analyze the following meeting transcript and identify all action items, tasks, and commitments.
+
+Meeting Transcript:
+{transcript}
+
+Detect and extract action items using these common phrases:
+- "I'll do"
+- "Can you handle"
+- "[Name] will follow up"
+- "I'll take care of"
+- "[Name] is responsible for"
+- "Please complete"
+- "Your task is to"
+- "You need to"
+- "Let's have [Name]"
+- Task assignments with deadlines
+
+For each action item, extract:
+1. **ID**: Generate a unique identifier (e.g., "AI-001", "AI-002")
+2. **Task**: Clear description of what needs to be done
+3. **Owner**: Person responsible (if not mentioned, use "Unassigned")
+4. **Deadline**: Due date in YYYY-MM-DD format. Convert relative dates:
+   - "by Friday" → calculate actual date
+   - "end of week" → Friday of current week
+   - "next week" → Friday of next week
+   - "by end of month" → last day of current month
+   - If no deadline mentioned, use "No deadline"
+5. **Priority**: Urgency level (urgent/high/medium/low) based on:
+   - Urgent: Immediate action required, critical deadlines
+   - High: Important, near-term deadline
+   - Medium: Standard priority
+   - Low: Can be deferred, no immediate deadline
+6. **Dependencies**: List any tasks or conditions this depends on
+7. **Mentioned At**: Timestamp when the action item was mentioned (if available)
+
+Return your analysis as a JSON object with this exact structure:
+
+{{
+  "action_items": [
+    {{
+      "id": "<unique ID like AI-001>",
+      "task": "<clear task description>",
+      "owner": "<person name or 'Unassigned'>",
+      "deadline": "<YYYY-MM-DD or 'No deadline'>",
+      "priority": "<urgent/high/medium/low>",
+      "dependencies": ["<list of dependencies>"],
+      "mentioned_at": "<timestamp if available, otherwise 'N/A'>"
+    }}
+  ],
+  "total_action_items": <number of action items>,
+  "unassigned_tasks": <count of tasks where owner is 'Unassigned'>
+}}
+
+Important:
+- Only include actual action items and commitments, not general discussions
+- If owner is unclear or not mentioned, use "Unassigned"
+- If no dependencies, use an empty array []
+- Generate sequential IDs starting from AI-001
+- Be precise and extract exact task descriptions from the transcript
+
+Provide ONLY the JSON object, no additional text or explanation.

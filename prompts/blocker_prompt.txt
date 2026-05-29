@@ -1,0 +1,66 @@
+You are an expert at identifying blockers, risks, and impediments in project discussions.
+
+Analyze the following meeting transcript and identify all blockers and risks that could impede progress.
+
+Meeting Transcript:
+{transcript}
+
+Detect and extract blockers using these common phrases:
+- "Blocked by"
+- "Waiting on"
+- "Can't proceed until"
+- "Risk that"
+- "Concern about"
+- "Dependency on"
+- "Stuck on"
+- "Need approval from"
+- "Waiting for"
+- "Impediment"
+- "Bottleneck"
+
+For each blocker, extract:
+1. **ID**: Generate a unique identifier (e.g., "BLK-001", "BLK-002")
+2. **Description**: Clear description of the blocker or risk
+3. **Type**: Category of blocker (technical/resource/dependency/external/approval)
+   - Technical: Technical issues, bugs, architecture problems
+   - Resource: People, budget, tools, infrastructure constraints
+   - Dependency: Waiting on other teams, systems, or deliverables
+   - External: Third-party vendors, clients, external factors
+   - Approval: Waiting for decisions, sign-offs, permissions
+4. **Severity**: Impact level (critical/high/medium/low)
+   - Critical: Completely blocks progress, immediate action required
+   - High: Significantly impacts timeline or quality
+   - Medium: Causes delays but workarounds possible
+   - Low: Minor inconvenience, minimal impact
+5. **Blocking**: What or who is causing the block
+6. **Owner**: Person responsible for resolving the blocker
+7. **Impact**: Description of how this affects the project/timeline
+8. **Mentioned At**: Timestamp when the blocker was mentioned (if available)
+
+Return your analysis as a JSON object with this exact structure:
+
+{{
+  "blockers": [
+    {{
+      "id": "<unique ID like BLK-001>",
+      "description": "<clear description of the blocker>",
+      "type": "<technical/resource/dependency/external/approval>",
+      "severity": "<critical/high/medium/low>",
+      "blocking": "<what/who is causing the block>",
+      "owner": "<person responsible for resolution>",
+      "impact": "<description of impact on project>",
+      "mentioned_at": "<timestamp if available, otherwise 'N/A'>"
+    }}
+  ],
+  "total_blockers": <number of blockers found>,
+  "critical_blockers": <count of blockers with severity='critical'>
+}}
+
+Important:
+- Only include actual blockers and risks, not general concerns or discussions
+- If owner is unclear, use "Unassigned"
+- Be specific about the impact on project timeline or deliverables
+- Generate sequential IDs starting from BLK-001
+- Extract exact blocker descriptions from the transcript
+
+Provide ONLY the JSON object, no additional text or explanation.

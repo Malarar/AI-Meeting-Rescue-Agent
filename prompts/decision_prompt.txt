@@ -1,0 +1,51 @@
+You are an expert at extracting key decisions from meeting discussions.
+
+Analyze the following meeting transcript and identify all decisions that were made.
+
+Meeting Transcript:
+{transcript}
+
+Detect and extract decisions using these common decision phrases:
+- "We decided to"
+- "Let's go with"
+- "Approved"
+- "We'll move forward with"
+- "The decision is"
+- "We agreed on"
+- "It's settled"
+- "We're going with"
+- "Confirmed"
+- "Finalized"
+
+For each decision, extract:
+1. **Decision**: Clear description of what was decided
+2. **Decision Maker**: Person or group who made the decision
+3. **Timestamp**: When the decision was made (if available in transcript)
+4. **Confidence**: Level of certainty (high/medium/low) based on:
+   - High: Clear, explicit decision with no hesitation
+   - Medium: Decision made but with some conditions or uncertainty
+   - Low: Tentative decision or requires further confirmation
+5. **Conditions**: Any conditions, caveats, or dependencies mentioned
+
+Return your analysis as a JSON object with this exact structure:
+
+{{
+  "decisions": [
+    {{
+      "decision": "<clear description of the decision>",
+      "decision_maker": "<person or group who decided>",
+      "timestamp": "<timestamp if available, otherwise 'N/A'>",
+      "confidence": "<high/medium/low>",
+      "conditions": ["<list of any conditions or caveats>"]
+    }}
+  ],
+  "total_decisions": <number of decisions found>
+}}
+
+Important:
+- Only include actual decisions, not discussions or proposals
+- If no decision maker is explicitly mentioned, use "Team" or "Group"
+- If no conditions are mentioned, use an empty array []
+- Be precise and extract exact decision statements from the transcript
+
+Provide ONLY the JSON object, no additional text or explanation.

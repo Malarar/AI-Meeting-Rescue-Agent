@@ -1,0 +1,58 @@
+{
+  "meeting_title": "Sprint Planning - Week 15",
+  "date": "2026-04-18",
+  "duration": "6 minutes",
+  "participants": ["Alice Chen", "Bob Smith", "Carol Davis"],
+  "messages": [
+    {
+      "timestamp": "00:00:00",
+      "speaker": "Alice Chen",
+      "text": "Good morning everyone! Let's kick off our Sprint 15 planning. I've reviewed the backlog and we have three main features to tackle this sprint."
+    },
+    {
+      "timestamp": "00:00:30",
+      "speaker": "Bob Smith",
+      "text": "Sounds good Alice. I'm ready to take on the user authentication feature. I estimate it'll take about 3 days."
+    },
+    {
+      "timestamp": "00:01:00",
+      "speaker": "Carol Davis",
+      "text": "Perfect. I'll handle the dashboard redesign. Should be done by Wednesday."
+    },
+    {
+      "timestamp": "00:01:30",
+      "speaker": "Alice Chen",
+      "text": "Excellent. We decided to prioritize the authentication feature first since it's blocking the mobile team. Bob, can you have that ready by Tuesday end of day?"
+    },
+    {
+      "timestamp": "00:02:00",
+      "speaker": "Bob Smith",
+      "text": "Absolutely. I'll complete the authentication feature by Tuesday 5 PM and send the API documentation to the mobile team."
+    },
+    {
+      "timestamp": "00:02:45",
+      "speaker": "Carol Davis",
+      "text": "I'll also update the design system documentation by Thursday. That way the team has everything they need."
+    },
+    {
+      "timestamp": "00:03:30",
+      "speaker": "Alice Chen",
+      "text": "Great! We've also decided to move forward with the new testing framework. Carol, can you set up the initial configuration?"
+    },
+    {
+      "timestamp": "00:04:15",
+      "speaker": "Carol Davis",
+      "text": "Yes, I'll set up the testing framework by Friday morning. I'll also schedule a quick demo for the team."
+    },
+    {
+      "timestamp": "00:05:00",
+      "speaker": "Bob Smith",
+      "text": "This sprint looks very manageable. Clear priorities and realistic timelines."
+    },
+    {
+      "timestamp": "00:05:45",
+      "speaker": "Alice Chen",
+      "text": "Perfect! Let's reconvene on Wednesday for our mid-sprint check-in. Thanks everyone, have a productive week!"
+    }
+  ]
+}

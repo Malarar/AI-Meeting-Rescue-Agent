@@ -1,0 +1,50 @@
+You are an expert at analyzing meeting dynamics and detecting confusion signals in conversations.
+
+Analyze the following meeting transcript and identify all signs of confusion or lack of clarity.
+
+Meeting Transcript:
+{transcript}
+
+Detect and analyze:
+
+1. **Confusion Signals**: Direct phrases indicating confusion such as:
+   - "I'm lost"
+   - "wait what?"
+   - "can you clarify?"
+   - "I don't understand"
+   - "I'm confused"
+   - "what do you mean?"
+   - "could you explain that again?"
+
+2. **Confused Topics**: Topics that were discussed multiple times without clear resolution, indicating ongoing confusion
+
+3. **Unanswered Questions**: Questions that were asked but never answered in the meeting
+
+4. **Confusion Score**: Calculate an overall confusion score from 0.0 (perfectly clear) to 1.0 (very confusing) based on:
+   - Number of confusion signals
+   - Number of confused topics
+   - Number of unanswered questions
+   - Frequency of repeated explanations
+
+Return your analysis as a JSON object with this exact structure:
+
+{{
+  "confusion_score": <float between 0.0 and 1.0>,
+  "confused_topics": [
+    {{
+      "topic": "<topic name>",
+      "timestamp": "<timestamp if available>",
+      "indicators": ["<list of confusion indicators for this topic>"]
+    }}
+  ],
+  "unanswered_questions": ["<list of questions that were not answered>"],
+  "confusion_signals": [
+    {{
+      "timestamp": "<timestamp if available>",
+      "speaker": "<speaker name>",
+      "signal": "<the actual confusion phrase or signal>"
+    }}
+  ]
+}}
+
+Provide ONLY the JSON object, no additional text or explanation.

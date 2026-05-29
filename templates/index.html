@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Meeting Rescue Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">🚑 AI Meeting Rescue Agent</h1>
+            <p class="subtitle">Powered by watsonx Orchestrate + Granite LLM</p>
+        </header>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <div class="upload-card">
+                <h2>Upload Meeting Transcript</h2>
+                <p class="upload-description">Upload a meeting transcript file (.json or .txt) to analyze</p>
+                
+                <div class="file-input-wrapper">
+                    <input type="file" id="fileInput" accept=".json,.txt" class="file-input">
+                    <label for="fileInput" class="file-label">
+                        <span class="file-icon">📁</span>
+                        <span id="fileName">Choose a file...</span>
+                    </label>
+                </div>
+
+                <button id="analyzeBtn" class="btn-primary" disabled>
+                    <span class="btn-text">Analyze Meeting</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Analyzing meeting transcript...</p>
+            <p class="loading-subtext">This may take 10-30 seconds</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message hidden">
+            <span class="error-icon">⚠️</span>
+            <span id="errorText"></span>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section hidden">
+            <!-- Health Score -->
+            <div class="health-card">
+                <h2>Meeting Health Score</h2>
+                <div class="health-score-container">
+                    <div class="health-score">
+                        <span id="healthEmoji" class="health-emoji">✅</span>
+                        <span id="healthScore" class="health-number">0</span>
+                        <span class="health-total">/100</span>
+                    </div>
+                    <div id="healthStatus" class="health-status">Healthy</div>
+                </div>
+                <div id="processingTime" class="processing-time"></div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab active" data-tab="summary">📊 Summary</button>
+                    <button class="tab" data-tab="decisions">✅ Decisions</button>
+                    <button class="tab" data-tab="actions">📋 Action Items</button>
+                    <button class="tab" data-tab="blockers">🚫 Blockers</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Summary Tab -->
+                    <div id="summaryTab" class="tab-pane active">
+                        <div class="summary-section">
+                            <h3>Executive Summary</h3>
+                            <p id="executiveSummary" class="executive-summary"></p>
+                        </div>
+
+                        <div class="summary-section">
+                            <h3>Key Highlights</h3>
+                            <ul id="keyHighlights" class="highlights-list"></ul>
+                        </div>
+
+                        <div class="summary-section">
+                            <h3>Top Priorities</h3>
+                            <ol id="topPriorities" class="priorities-list"></ol>
+                        </div>
+
+                        <div id="redFlagsSection" class="summary-section hidden">
+                            <h3>🔴 Red Flags</h3>
+                            <ul id="redFlags" class="red-flags-list"></ul>
+                        </div>
+
+                        <div class="summary-section">
+                            <h3>Next Steps</h3>
+                            <ul id="nextSteps" class="next-steps-list"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Decisions Tab -->
+                    <div id="decisionsTab" class="tab-pane">
+                        <div id="decisionsContent"></div>
+                    </div>
+
+                    <!-- Action Items Tab -->
+                    <div id="actionsTab" class="tab-pane">
+                        <div id="actionsContent"></div>
+                    </div>
+
+                    <!-- Blockers Tab -->
+                    <div id="blockersTab" class="tab-pane">
+                        <div id="blockersContent"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Button -->
+            <div class="download-section">
+                <button id="downloadBtn" class="btn-secondary">
+                    <span class="btn-icon">⬇️</span>
+                    <span class="btn-text">Download Report</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

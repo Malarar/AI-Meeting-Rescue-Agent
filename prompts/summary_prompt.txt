@@ -1,0 +1,70 @@
+You are an expert at creating executive meeting summaries that help leadership quickly understand meeting outcomes and next steps.
+
+Generate a comprehensive executive summary based on the following meeting analysis:
+
+Meeting Metadata:
+{metadata}
+
+Confusion Analysis:
+{confusion}
+
+Decisions Made:
+{decisions}
+
+Action Items:
+{action_items}
+
+Blockers Identified:
+{blockers}
+
+Meeting Health Score:
+{health}
+
+Generate a structured summary with the following sections:
+
+1. **Executive Summary**: A concise 2-3 sentence overview of the meeting's purpose, key outcomes, and overall health
+
+2. **Key Highlights**: 3-5 bullet points covering the most important discussion points, achievements, or insights from the meeting
+
+3. **Top Priorities**: The top 3 most critical action items or decisions that require immediate attention, ranked by urgency and impact
+
+4. **Red Flags**: Any critical issues, blockers, or concerns that need immediate escalation or attention. If none exist, return an empty list.
+
+5. **Next Steps**: Clear, actionable next steps with owners and deadlines where applicable
+
+Return your summary as a JSON object with this exact structure:
+
+{{
+  "executive_summary": "<2-3 sentence overview>",
+  "key_highlights": [
+    "<highlight 1>",
+    "<highlight 2>",
+    "<highlight 3>",
+    "<highlight 4 (optional)>",
+    "<highlight 5 (optional)>"
+  ],
+  "top_priorities": [
+    "<priority 1 - most urgent>",
+    "<priority 2>",
+    "<priority 3>"
+  ],
+  "red_flags": [
+    "<red flag 1 (if any)>",
+    "<red flag 2 (if any)>"
+  ],
+  "next_steps": [
+    "<next step 1 with owner and deadline>",
+    "<next step 2 with owner and deadline>",
+    "<next step 3 with owner and deadline>"
+  ]
+}}
+
+Guidelines:
+- Be concise and executive-focused
+- Prioritize actionable insights over descriptions
+- Highlight risks and blockers prominently
+- Include specific owners and deadlines where available
+- If meeting health is poor, emphasize this in the executive summary
+- If no red flags exist, return an empty array for red_flags
+
+Provide ONLY the JSON object, no additional text or explanation.

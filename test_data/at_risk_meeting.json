@@ -1,0 +1,93 @@
+{
+  "meeting_title": "Product Launch Planning",
+  "date": "2026-04-18",
+  "duration": "22 minutes",
+  "participants": ["Henry Park", "Iris Thompson", "Jack Robinson"],
+  "messages": [
+    {
+      "timestamp": "00:00:00",
+      "speaker": "Henry Park",
+      "text": "Thanks for joining. We need to finalize our product launch plan for next month. Let's review where we stand."
+    },
+    {
+      "timestamp": "00:01:30",
+      "speaker": "Iris Thompson",
+      "text": "I've completed the marketing materials, but I'm waiting on legal approval for the product claims. They've had it for two weeks now."
+    },
+    {
+      "timestamp": "00:02:45",
+      "speaker": "Jack Robinson",
+      "text": "That's concerning. The legal review is blocking our entire launch timeline. Do we have a backup plan?"
+    },
+    {
+      "timestamp": "00:04:00",
+      "speaker": "Henry Park",
+      "text": "Not really. We're dependent on that approval. Jack, can you follow up with the legal team today to get a status update?"
+    },
+    {
+      "timestamp": "00:05:15",
+      "speaker": "Jack Robinson",
+      "text": "Sure, I'll reach out to Sarah in legal this afternoon and push for a response by end of week."
+    },
+    {
+      "timestamp": "00:06:30",
+      "speaker": "Iris Thompson",
+      "text": "What about the pricing strategy? I thought we were going to decide on that today. Are we doing the tiered model or flat rate?"
+    },
+    {
+      "timestamp": "00:08:00",
+      "speaker": "Henry Park",
+      "text": "Good question. I think... let's tentatively go with the tiered model. But we should probably validate this with finance first."
+    },
+    {
+      "timestamp": "00:09:30",
+      "speaker": "Jack Robinson",
+      "text": "I'm not sure about that. The flat rate might be simpler for customers. Can you clarify the reasoning for tiered?"
+    },
+    {
+      "timestamp": "00:11:00",
+      "speaker": "Henry Park",
+      "text": "The tiered model gives us more flexibility and potentially higher revenue. But you're right, we need more data. Someone should analyze the competitor pricing."
+    },
+    {
+      "timestamp": "00:12:45",
+      "speaker": "Iris Thompson",
+      "text": "I can do the competitor analysis. I'll have a report ready by next Tuesday with recommendations."
+    },
+    {
+      "timestamp": "00:14:00",
+      "speaker": "Jack Robinson",
+      "text": "We also need to finalize the launch date. Are we still targeting May 15th or should we push it back given the legal blocker?"
+    },
+    {
+      "timestamp": "00:15:30",
+      "speaker": "Henry Park",
+      "text": "Let's keep May 15th as the target for now, but we'll need to reassess next week once we hear back from legal. If they don't approve by Friday, we'll have to delay."
+    },
+    {
+      "timestamp": "00:17:00",
+      "speaker": "Iris Thompson",
+      "text": "That makes sense. I'm also concerned about the customer support training. Has anyone scheduled that yet?"
+    },
+    {
+      "timestamp": "00:18:15",
+      "speaker": "Jack Robinson",
+      "text": "Oh, I forgot about that. That's not assigned to anyone. We need someone to coordinate the training sessions."
+    },
+    {
+      "timestamp": "00:19:30",
+      "speaker": "Henry Park",
+      "text": "That's a gap we need to fill. Can someone take ownership of that? It's critical for launch readiness."
+    },
+    {
+      "timestamp": "00:20:45",
+      "speaker": "Iris Thompson",
+      "text": "I'm already stretched thin with the marketing materials and competitor analysis. Maybe we need to bring in someone from the training team?"
+    },
+    {
+      "timestamp": "00:21:30",
+      "speaker": "Henry Park",
+      "text": "Okay, I'll reach out to the training team and see who's available. Let's reconvene on Monday to review progress on all fronts. Thanks everyone."
+    }
+  ]
+}

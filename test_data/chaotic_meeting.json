@@ -1,0 +1,108 @@
+{
+  "meeting_title": "Architecture Discussion",
+  "date": "2026-04-18",
+  "duration": "26 minutes",
+  "participants": ["Dave Johnson", "Eve Martinez", "Frank Wilson", "Grace Lee"],
+  "messages": [
+    {
+      "timestamp": "00:00:00",
+      "speaker": "Dave Johnson",
+      "text": "Okay everyone, we need to discuss the new microservices architecture. There's been some confusion about the approach."
+    },
+    {
+      "timestamp": "00:01:15",
+      "speaker": "Eve Martinez",
+      "text": "Wait, I thought we were talking about the database migration today? I'm confused about the agenda."
+    },
+    {
+      "timestamp": "00:02:00",
+      "speaker": "Frank Wilson",
+      "text": "I'm lost. Are we doing microservices or monolith? Last week we said monolith was better for our team size."
+    },
+    {
+      "timestamp": "00:03:30",
+      "speaker": "Grace Lee",
+      "text": "Can you clarify what the actual problem is we're trying to solve? I don't understand why we're changing the architecture."
+    },
+    {
+      "timestamp": "00:04:45",
+      "speaker": "Dave Johnson",
+      "text": "Well, the performance issues... but also scalability. And the vendor said microservices are better."
+    },
+    {
+      "timestamp": "00:06:00",
+      "speaker": "Eve Martinez",
+      "text": "What vendor? I wasn't aware we were talking to vendors. This is the first I'm hearing about it."
+    },
+    {
+      "timestamp": "00:07:30",
+      "speaker": "Frank Wilson",
+      "text": "We're blocked by the infrastructure team anyway. They haven't approved our Kubernetes cluster request from three weeks ago."
+    },
+    {
+      "timestamp": "00:09:00",
+      "speaker": "Grace Lee",
+      "text": "Wait what? We need Kubernetes approval? I thought we were using AWS Lambda?"
+    },
+    {
+      "timestamp": "00:10:15",
+      "speaker": "Dave Johnson",
+      "text": "No, Lambda was for the other project. Or was it? I need to check my notes."
+    },
+    {
+      "timestamp": "00:11:45",
+      "speaker": "Eve Martinez",
+      "text": "This is really confusing. Can we take a step back? What are we actually deciding today?"
+    },
+    {
+      "timestamp": "00:13:00",
+      "speaker": "Frank Wilson",
+      "text": "I don't know. Someone needs to document this. Who's taking notes? Did anyone send out an agenda?"
+    },
+    {
+      "timestamp": "00:14:30",
+      "speaker": "Grace Lee",
+      "text": "I'm also concerned about the timeline. When is this supposed to be implemented? And who's doing the work?"
+    },
+    {
+      "timestamp": "00:16:00",
+      "speaker": "Dave Johnson",
+      "text": "Good question. We need resources but the team is already at capacity. We're waiting on hiring approval from HR."
+    },
+    {
+      "timestamp": "00:17:45",
+      "speaker": "Eve Martinez",
+      "text": "So we're blocked by infrastructure AND HR? This seems like a bigger problem than just architecture."
+    },
+    {
+      "timestamp": "00:19:00",
+      "speaker": "Frank Wilson",
+      "text": "What about the security review? Don't we need that before making any architecture changes?"
+    },
+    {
+      "timestamp": "00:20:30",
+      "speaker": "Grace Lee",
+      "text": "I don't understand how we got here. Can someone explain the original requirements again?"
+    },
+    {
+      "timestamp": "00:22:00",
+      "speaker": "Dave Johnson",
+      "text": "Let me find the requirements doc... I think it's in SharePoint somewhere. Or was it in Confluence?"
+    },
+    {
+      "timestamp": "00:23:30",
+      "speaker": "Eve Martinez",
+      "text": "This is frustrating. We've been talking for 23 minutes and haven't made any decisions. Should we reschedule when we have more clarity?"
+    },
+    {
+      "timestamp": "00:24:45",
+      "speaker": "Frank Wilson",
+      "text": "Yeah, I think we need to regroup. Someone should talk to the infrastructure team first."
+    },
+    {
+      "timestamp": "00:25:30",
+      "speaker": "Grace Lee",
+      "text": "Agreed. Let's reconvene next week. Hopefully with a clear agenda and the right people in the room."
+    }
+  ]
+}
