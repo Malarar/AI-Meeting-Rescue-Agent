@@ -82,15 +82,16 @@ class TranscriptParser:
         
         Expected structure:
         {
-            "meeting_title": "...",
+            "meeting_title": "..." or "title": "...",
             "date": "YYYY-MM-DD" (optional),
-            "messages": [
-                {
-                    "timestamp": "HH:MM:SS",
-                    "speaker": "...",
-                    "text": "..."
-                }
-            ]
+            "messages": [...] or "transcript": [...]
+        }
+        
+        Each message/transcript item should have:
+        {
+            "timestamp": "HH:MM:SS",
+            "speaker": "...",
+            "text": "..."
         }
         
         Args:
@@ -110,12 +111,16 @@ class TranscriptParser:
         if not isinstance(data, dict):
             raise ValueError("JSON must be an object/dictionary")
         
-        if 'messages' not in data:
-            raise ValueError("JSON must contain 'messages' field")
+        # Check for either 'messages' or 'transcript' field
+        if 'messages' in data:
+            messages = data['messages']
+        elif 'transcript' in data:
+            messages = data['transcript']
+        else:
+            raise ValueError("JSON must contain either 'messages' or 'transcript' field")
         
-        messages = data['messages']
         if not isinstance(messages, list):
-            raise ValueError("'messages' must be an array")
+            raise ValueError("'messages' or 'transcript' must be an array")
         
         parsed_messages = []
         
@@ -132,12 +137,15 @@ class TranscriptParser:
             # Parse timestamp
             timestamp_obj = self._parse_timestamp(msg['timestamp'])
             
+            # Get meeting title from either 'meeting_title' or 'title' field
+            meeting_title = data.get('meeting_title') or data.get('title', 'Untitled Meeting')
+            
             parsed_messages.append({
                 'timestamp': msg['timestamp'],
                 'timestamp_obj': timestamp_obj,
                 'speaker': msg['speaker'].strip(),
                 'text': msg['text'].strip(),
-                'meeting_title': data.get('meeting_title', 'Untitled Meeting'),
+                'meeting_title': meeting_title,
                 'date': data.get('date', None)
             })
         

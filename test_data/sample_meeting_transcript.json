@@ -1,0 +1,275 @@
+{
+  "meeting_id": "MTG-2026-001",
+  "title": "Q2 Product Launch Planning Meeting",
+  "date": "2026-06-02",
+  "duration_minutes": 45,
+  "participants": [
+    {
+      "name": "Sarah Chen",
+      "role": "Product Manager",
+      "email": "sarah.chen@company.com"
+    },
+    {
+      "name": "Michael Rodriguez",
+      "role": "Engineering Lead",
+      "email": "michael.rodriguez@company.com"
+    },
+    {
+      "name": "Emily Watson",
+      "role": "Marketing Director",
+      "email": "emily.watson@company.com"
+    },
+    {
+      "name": "David Kim",
+      "role": "UX Designer",
+      "email": "david.kim@company.com"
+    },
+    {
+      "name": "Lisa Thompson",
+      "role": "QA Manager",
+      "email": "lisa.thompson@company.com"
+    }
+  ],
+  "transcript": [
+    {
+      "timestamp": "00:00:15",
+      "speaker": "Sarah Chen",
+      "text": "Good morning everyone! Thanks for joining. Let's dive into our Q2 product launch planning. We have a lot to cover today, so I'll keep us on track. First item on the agenda is the timeline review."
+    },
+    {
+      "timestamp": "00:00:45",
+      "speaker": "Michael Rodriguez",
+      "text": "Thanks Sarah. From the engineering side, we're currently at 75% completion on the core features. However, I need to flag a potential blocker - the API integration with the payment gateway is taking longer than expected. We estimated 2 weeks, but it's looking more like 3-4 weeks now."
+    },
+    {
+      "timestamp": "00:01:20",
+      "speaker": "Sarah Chen",
+      "text": "That's concerning. Can you elaborate on what's causing the delay? Is it a technical issue or a vendor issue?"
+    },
+    {
+      "timestamp": "00:01:35",
+      "speaker": "Michael Rodriguez",
+      "text": "It's a combination of both. The payment gateway's API documentation is incomplete, and their support team has been slow to respond. We've also discovered some edge cases in our implementation that need additional testing. I think we need to either push back the launch date by two weeks or descope some features."
+    },
+    {
+      "timestamp": "00:02:10",
+      "speaker": "Emily Watson",
+      "text": "Wait, pushing back the launch isn't really an option. We've already committed to our marketing campaign timeline, and we have press releases scheduled for June 15th. Can we work around this somehow?"
+    },
+    {
+      "timestamp": "00:02:30",
+      "speaker": "Michael Rodriguez",
+      "text": "I understand the marketing constraints, but I'm not comfortable launching with an incomplete payment system. That's a critical feature. Maybe we could launch with a limited beta first?"
+    },
+    {
+      "timestamp": "00:02:50",
+      "speaker": "Sarah Chen",
+      "text": "Let me think about this. David, what's the status on the UX side? Are there any dependencies on the payment integration?"
+    },
+    {
+      "timestamp": "00:03:05",
+      "speaker": "David Kim",
+      "text": "Actually, yes. The checkout flow design is complete, but we haven't been able to test it with the actual payment gateway. We've been using mock data. I'm also concerned about the mobile responsiveness - we found some issues on smaller screens that need fixing."
+    },
+    {
+      "timestamp": "00:03:35",
+      "speaker": "Lisa Thompson",
+      "text": "From QA perspective, I have to agree with Michael. We can't properly test the payment flow without the integration being complete. We've identified 23 critical bugs so far, and 15 of them are related to the payment system. I'd estimate we need at least one full week of testing after the integration is done."
+    },
+    {
+      "timestamp": "00:04:10",
+      "speaker": "Emily Watson",
+      "text": "This is really frustrating. I feel like we're not on the same page here. The executive team is expecting this launch on schedule. Can someone explain to me in simple terms - what exactly is the problem with the payment gateway?"
+    },
+    {
+      "timestamp": "00:04:35",
+      "speaker": "Michael Rodriguez",
+      "text": "Sure, let me break it down. The payment gateway provider, PaySecure, has a complex API that requires multiple authentication steps. Their documentation doesn't cover all the error scenarios we need to handle. For example, what happens if a user's card is declined? What if the connection times out? We need to handle all these cases gracefully, and we're still figuring out how their system responds to these situations."
+    },
+    {
+      "timestamp": "00:05:15",
+      "speaker": "Emily Watson",
+      "text": "Okay, that makes more sense. So it's not that we can't integrate it, it's that we need more time to handle all the edge cases properly?"
+    },
+    {
+      "timestamp": "00:05:25",
+      "speaker": "Michael Rodriguez",
+      "text": "Exactly. We could do a basic integration in a week, but it wouldn't be production-ready. Users would encounter errors and have a poor experience."
+    },
+    {
+      "timestamp": "00:05:45",
+      "speaker": "Sarah Chen",
+      "text": "Alright, let me propose a solution. What if we do a phased launch? We could launch the product on June 15th as planned, but initially only to our beta users - maybe 500 people. This gives us two more weeks to finalize the payment integration while still meeting our marketing commitment. Then we do a full public launch on July 1st. Emily, could that work with your marketing plan?"
+    },
+    {
+      "timestamp": "00:06:25",
+      "speaker": "Emily Watson",
+      "text": "Hmm, that could actually work. We could position it as an exclusive early access program. It might even generate more buzz. Let me check with the PR team, but I think we can make that work. We'd need to adjust our messaging though."
+    },
+    {
+      "timestamp": "00:06:50",
+      "speaker": "Michael Rodriguez",
+      "text": "That sounds much more reasonable from an engineering standpoint. We could have the payment integration fully tested and ready by June 28th, giving us a few days buffer before the July 1st launch."
+    },
+    {
+      "timestamp": "00:07:10",
+      "speaker": "Lisa Thompson",
+      "text": "I like this approach. It also gives us real user feedback during the beta phase, which could help us catch issues we haven't thought of."
+    },
+    {
+      "timestamp": "00:07:25",
+      "speaker": "David Kim",
+      "text": "Agreed. And we can use the beta period to fine-tune the UX based on actual user behavior."
+    },
+    {
+      "timestamp": "00:07:40",
+      "speaker": "Sarah Chen",
+      "text": "Great! So we have a decision - phased launch with beta on June 15th and full launch on July 1st. Let me document this and send it to the executive team for approval. Michael, can you send me a detailed breakdown of the remaining engineering tasks by end of day?"
+    },
+    {
+      "timestamp": "00:08:00",
+      "speaker": "Michael Rodriguez",
+      "text": "Absolutely. I'll include timeline estimates and resource requirements."
+    },
+    {
+      "timestamp": "00:08:10",
+      "speaker": "Sarah Chen",
+      "text": "Perfect. Emily, please draft the updated marketing timeline and share it with the team by tomorrow morning."
+    },
+    {
+      "timestamp": "00:08:20",
+      "speaker": "Emily Watson",
+      "text": "Will do. I'll also loop in the PR team about the messaging changes."
+    },
+    {
+      "timestamp": "00:08:30",
+      "speaker": "Sarah Chen",
+      "text": "Excellent. Lisa, can you update the QA test plan to reflect the two-phase approach?"
+    },
+    {
+      "timestamp": "00:08:40",
+      "speaker": "Lisa Thompson",
+      "text": "Yes, I'll have that ready by Wednesday."
+    },
+    {
+      "timestamp": "00:08:50",
+      "speaker": "Sarah Chen",
+      "text": "And David, please prioritize the mobile responsiveness fixes. Those need to be done before the beta launch."
+    },
+    {
+      "timestamp": "00:09:00",
+      "speaker": "David Kim",
+      "text": "Got it. I'll work with Michael's team to get those resolved this week."
+    },
+    {
+      "timestamp": "00:09:15",
+      "speaker": "Sarah Chen",
+      "text": "Wonderful. Before we wrap up, does anyone have any other concerns or questions about this plan?"
+    },
+    {
+      "timestamp": "00:09:30",
+      "speaker": "Michael Rodriguez",
+      "text": "Just one thing - we should probably have a contingency plan in case we hit more issues during beta. What if we discover a critical bug that requires more time to fix?"
+    },
+    {
+      "timestamp": "00:09:50",
+      "speaker": "Sarah Chen",
+      "text": "Good point. Let's plan for a go/no-go meeting on June 28th. We'll assess the beta results and make a final decision on the July 1st launch. If we need to push it back, we'll have that discussion then. Does that work for everyone?"
+    },
+    {
+      "timestamp": "00:10:10",
+      "speaker": "Emily Watson",
+      "text": "Yes, that gives us enough time to adjust marketing if needed."
+    },
+    {
+      "timestamp": "00:10:20",
+      "speaker": "Michael Rodriguez",
+      "text": "Perfect. That makes me feel much more comfortable."
+    },
+    {
+      "timestamp": "00:10:30",
+      "speaker": "Sarah Chen",
+      "text": "Alright team, great discussion today. I really appreciate everyone's flexibility and problem-solving. Let's make this launch a success! I'll send out meeting notes and action items within the hour. Have a great rest of your day!"
+    },
+    {
+      "timestamp": "00:10:50",
+      "speaker": "All",
+      "text": "Thanks Sarah! Bye everyone!"
+    }
+  ],
+  "action_items": [
+    {
+      "description": "Send detailed breakdown of remaining engineering tasks with timeline estimates and resource requirements",
+      "assigned_to": "Michael Rodriguez",
+      "due_date": "2026-06-02",
+      "priority": "high"
+    },
+    {
+      "description": "Draft updated marketing timeline and share with team",
+      "assigned_to": "Emily Watson",
+      "due_date": "2026-06-03",
+      "priority": "high"
+    },
+    {
+      "description": "Loop in PR team about messaging changes for phased launch",
+      "assigned_to": "Emily Watson",
+      "due_date": "2026-06-03",
+      "priority": "medium"
+    },
+    {
+      "description": "Update QA test plan to reflect two-phase launch approach",
+      "assigned_to": "Lisa Thompson",
+      "due_date": "2026-06-05",
+      "priority": "high"
+    },
+    {
+      "description": "Prioritize and fix mobile responsiveness issues before beta launch",
+      "assigned_to": "David Kim",
+      "due_date": "2026-06-12",
+      "priority": "high"
+    },
+    {
+      "description": "Send meeting notes and action items to team",
+      "assigned_to": "Sarah Chen",
+      "due_date": "2026-06-02",
+      "priority": "high"
+    },
+    {
+      "description": "Get executive team approval for phased launch plan",
+      "assigned_to": "Sarah Chen",
+      "due_date": "2026-06-03",
+      "priority": "critical"
+    },
+    {
+      "description": "Schedule go/no-go meeting for June 28th",
+      "assigned_to": "Sarah Chen",
+      "due_date": "2026-06-02",
+      "priority": "medium"
+    }
+  ],
+  "decisions": [
+    {
+      "description": "Implement phased launch: Beta launch on June 15th with 500 users, full public launch on July 1st",
+      "made_by": "Sarah Chen",
+      "timestamp": "00:07:40",
+      "rationale": "Balances engineering needs for proper payment integration testing with marketing commitments"
+    },
+    {
+      "description": "Schedule go/no-go meeting on June 28th to assess beta results and confirm July 1st launch",
+      "made_by": "Sarah Chen",
+      "timestamp": "00:09:50",
+      "rationale": "Provides contingency planning in case critical issues are discovered during beta"
+    }
+  ],
+  "key_topics": [
+    "Product launch timeline",
+    "Payment gateway integration challenges",
+    "Marketing campaign constraints",
+    "QA testing requirements",
+    "Mobile responsiveness issues",
+    "Phased launch strategy",
+    "Beta testing approach"
+  ],
+  "sentiment": "constructive",
+  "meeting_health": "healthy"
+}

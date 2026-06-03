@@ -56,3 +56,4 @@ Thumbs.db
 *.sqlite
 
 # Made with Bob
+.env.example
