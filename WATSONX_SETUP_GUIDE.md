@@ -58,7 +58,7 @@ This is the simplest approach and ensures everything is configured correctly fro
 
 6. **Update Your .env File**
    - Open the `.env` file in your AI Meeting Rescue Agent project
-   - Find the line: `WATSONX_PROJECT_ID=54a0562e-d293-4522-8279-3e8ae29c2d31`
+   - Find the line: `WATSONX_PROJECT_ID=`xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
    - Replace it with your new Project ID: `WATSONX_PROJECT_ID=your-new-project-id-here`
    - **Save the file**
 
@@ -78,7 +78,7 @@ This is the simplest approach and ensures everything is configured correctly fro
 
 ### Option 2: Associate Your Existing Project with WML
 
-If you want to keep using your current project (ID: `54a0562e-d293-4522-8279-3e8ae29c2d31`):
+If you want to keep using your current project (ID: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`):
 
 #### Method A: Through Watson Studio
 
@@ -133,7 +133,7 @@ If you don't have a Watson Machine Learning service instance:
 ```
 URL:        https://us-south.ml.cloud.ibm.com
 API Key:    ********************KzxZ (VALID ✓)
-Project ID: 54a0562e-d293-4522-8279-3e8ae29c2d31 (EXISTS ✓, NOT ASSOCIATED WITH WML ✗)
+Project ID: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` (EXISTS ✓, NOT ASSOCIATED WITH WML ✗)
 Model ID:   ibm/granite-13b-chat-v2
 ```
 
